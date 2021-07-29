@@ -7,6 +7,7 @@
 
 import torch
 from torch import nn
+from torch import optim
 
 
 def tensor_exe():
@@ -37,10 +38,15 @@ def net_exe():
 
     print(net)
     print('-' * 20)
-    print(net.parameters())
 
+    # 参数
+    print(net.parameters())
     for para in net.parameters():
         print(para)
+
+    # 优化器
+    optimizer = optim.SGD(net.parameters(), lr=0.03)
+    print(optimizer)
 
 
 if __name__ == '__main__':
