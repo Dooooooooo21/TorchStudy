@@ -31,6 +31,20 @@ class MLP(nn.Module):
 3. ModuleDict
 """
 
+"""
+init 模块初始化参数
+1. init.normal_
+2. init.constant_
+3. 自定义初始化函数
+4. 多层之间共享参数
+5. 模型参数的延后初始化, 在坐前向net(x)运算时，进行初始化操作
+"""
+
+"""
+自定义层
+继承nn.Module, 写__init__, forward函数
+"""
+
 if __name__ == '__main__':
     X = torch.rand(2, 784)
     net = MLP()
