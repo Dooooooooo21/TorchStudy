@@ -8,6 +8,7 @@
 import torch
 from torch import nn
 from torch import optim
+from torch.nn import init
 
 
 def tensor_exe():
@@ -47,6 +48,23 @@ def net_exe():
     # 优化器
     optimizer = optim.SGD(net.parameters(), lr=0.03)
     print(optimizer)
+
+
+def mlp():
+    """
+    多层感知机 MLP
+    隐藏层、激活函数、
+    """
+    num_inputs, num_outputs, num_hiddens = 784, 10, 256
+
+    net = nn.Sequential(
+        nn.Linear(num_inputs, num_hiddens),
+        nn.ReLU(),
+        nn.Linear(num_hiddens, num_outputs),
+    )
+
+    for params in net.parameters():
+        init.normal_(params, mean=0, std=0.01)
 
 
 if __name__ == '__main__':
