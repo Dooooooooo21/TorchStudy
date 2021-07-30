@@ -67,5 +67,13 @@ def mlp():
         init.normal_(params, mean=0, std=0.01)
 
 
+"""
+1. 过拟合、欠拟合
+2. l2正则化(权重衰减)、dropout、
+3. 正向传播、反向传播、计算图
+4. 梯度衰减、爆炸
+5. 参数初始化
+"""
+
 if __name__ == '__main__':
     net_exe()
