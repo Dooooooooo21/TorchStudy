@@ -45,9 +45,19 @@ init 模块初始化参数
 继承nn.Module, 写__init__, forward函数
 """
 
+"""
+model 保存、读取
+save、load
+1. torch.save(model.state_dict(), PATH) # 推荐的文件后缀名是pt或pth
+2. torch.save(model, PATH)
+"""
+
 if __name__ == '__main__':
     X = torch.rand(2, 784)
     net = MLP()
     print(net)
+
+    print(net.state_dict())
+
     out = net(X)
     print(out)
