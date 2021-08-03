@@ -17,6 +17,14 @@ from torch import nn
 6. LeNet, AlexNet, VGG
 """
 
+"""
+1. 堆积的小卷积核优于大的卷积核, 可以增加深度
+2. Inception, 并行连接
+3. BN
+4. ResNet
+5. DenseNet
+"""
+
 
 # 定义一个函数来计算卷积层。它对输入和输出做相应的升维和降维
 def comp_conv2d(conv2d, X):
